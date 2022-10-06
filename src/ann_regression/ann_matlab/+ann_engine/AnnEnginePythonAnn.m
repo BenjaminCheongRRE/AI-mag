@@ -109,7 +109,7 @@ classdef AnnEnginePythonAnn < ann_engine.AnnEngineAbstract
             assert(data_out.status==true, 'prediction Python error')
             
             % response data
-            out = data_out.out;
+            out = double(data_out.out);
         end
     end
 end

@@ -32,7 +32,7 @@ file_assemble = ['dataset/' model_type '_assemble.mat'];
 file_ann = ['dataset/' model_type '_ann.mat'];
 
 % get the ANN/regression parameters
-ann_input = get_dataset_param_train(model_type, 'matlab_ann');
+ann_input = get_dataset_param_train(model_type, 'python_ann');
 
 % make the ANN/regression
 master_train(file_ann, file_assemble, ann_input)

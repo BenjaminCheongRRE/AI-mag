@@ -165,7 +165,10 @@ switch ann_type
         ann_info.timeout = 240;
         
         % tag to be passed for the training/fitting method (not used in this example)
-        ann_info.tag_train = 'none';
+        % ann_info.tag_train = 'none';
+        ann_info.tag_train.activation = 'relu';
+        ann_info.tag_train.n_layer = 6;
+        ann_info.tag_train.n_neuron = 64;
     otherwise
         error('invalid evaluation method')
 end

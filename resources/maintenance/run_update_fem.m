@@ -9,11 +9,11 @@ function run_update_fem()
 %    (c) 2019-2020, ETH Zurich, Power Electronic Systems Laboratory, T. Guillod
 
 % path of the root of the project
-folder = '../..';
+folder = ['..' filesep() '..'];
 
 % update the datasets
-get_assemble('dataset/fem_ht', folder, @fct_handle)
-get_assemble('dataset/fem_mf', folder, @fct_handle)
+get_assemble(['dataset' filesep() 'fem_ht'], folder, @fct_handle)
+get_assemble(['dataset' filesep() 'fem_mf'], folder, @fct_handle)
 
 end
 
@@ -45,7 +45,7 @@ for i=1:length(filelist)
     
     % if required, save the new version
     if is_update_tmp==true
-        save(filename_tmp, '-v7.3', '-struct', 'data_tmp')
+        save(filename_tmp, '-struct', 'data_tmp')
         n_update = n_update+1;
     end
 end
